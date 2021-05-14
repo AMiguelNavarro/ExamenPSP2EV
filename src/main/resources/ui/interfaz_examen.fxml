@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="608.0" prefWidth="815.0">
+         <children>
+            <Text layoutX="23.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Listado de todos los trabajos" />
+            <ListView fx:id="lvJobs" layoutX="23.0" layoutY="48.0" onMouseClicked="#getSelectedJob" prefHeight="525.0" prefWidth="318.0" />
+            <TextField fx:id="tfDescription" layoutX="408.0" layoutY="84.0" prefHeight="25.0" prefWidth="197.0" />
+            <Button fx:id="btSearch1" layoutX="626.0" layoutY="84.0" mnemonicParsing="false" onAction="#findByDescription" prefHeight="25.0" prefWidth="71.0" text="Buscar" />
+            <Text layoutX="408.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filtrar por lenguaje de programación:" />
+            <Separator layoutX="369.0" layoutY="23.0" orientation="VERTICAL" prefHeight="543.0" prefWidth="6.0" />
+            <ComboBox fx:id="cbLocation" layoutX="408.0" layoutY="170.0" prefHeight="25.0" prefWidth="197.0" />
+            <Text layoutX="408.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccionar Ubicación:" />
+            <Button fx:id="btSearch2" layoutX="626.0" layoutY="170.0" mnemonicParsing="false" onAction="#findByLocation" prefHeight="25.0" prefWidth="71.0" text="Buscar" />
+            <Text layoutX="408.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FICHA DESCRIPTIVA">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Text>
+            <Text layoutX="408.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jornada: " textAlignment="RIGHT" wrappingWidth="70.45166015625">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="408.0" layoutY="393.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Compañia:" textAlignment="RIGHT">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtType" layoutX="498.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="234.0" />
+            <Text fx:id="txtCompany" layoutX="498.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="234.0" />
+            <Button fx:id="btExport" layoutX="408.0" layoutY="530.0" mnemonicParsing="false" onAction="#exportCSV" prefHeight="40.0" prefWidth="130.0" text="Exportar CSV">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Text layoutX="550.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(Exporta el listado actual)" />
+            <Button layoutX="223.0" layoutY="11.0" mnemonicParsing="false" onAction="#reset" prefHeight="25.0" prefWidth="118.0" text="Reset Listado" />
+            <CheckBox fx:id="checkBoxFullTime" layoutX="408.0" layoutY="205.0" mnemonicParsing="false" text="Mostrar unicamente ofertas FULL TIME" />
+            <Separator layoutX="407.0" layoutY="269.0" prefHeight="3.0" prefWidth="348.0" />
+            <Separator layoutX="407.0" layoutY="449.0" prefHeight="3.0" prefWidth="348.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
